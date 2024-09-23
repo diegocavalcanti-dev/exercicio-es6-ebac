@@ -1,4 +1,4 @@
-const listDeNotasEAlunos = [
+const listaDeNotasEAlunos = [
     { nota: 7, nome: 'Jefferson' },
     { nota: 5, nome: 'Edson' },
     { nota: 8, nome: 'Edna' },
@@ -6,17 +6,7 @@ const listDeNotasEAlunos = [
     { nota: 6, nome: 'Diego' }
 ];
 
-const estaAprovado = aluno => aluno.nota >= 6;
+const filtrarAlunosAprovados = alunos => alunos.filter(aluno => aluno.nota >= 6);
 
-function filtrarAlunosAprovados(alunos) {
-    const alunosAprovados = [];
-    for (const aluno of alunos) {
-        if (estaAprovado(aluno)) {
-            alunosAprovados.push(aluno);
-        }
-    }
-    return alunosAprovados;
-}
-
-const resultadoAprovados = filtrarAlunosAprovados(listDeNotasEAlunos);
+const resultadoAprovados = filtrarAlunosAprovados(listaDeNotasEAlunos);
 console.log('Notas e Alunos aprovados:', resultadoAprovados);
